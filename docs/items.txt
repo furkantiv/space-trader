@@ -1,0 +1,126 @@
+Equipment
+Equipment encompasses consumable items that are used to recharge certain blocks, recharge the spacesuit, and ammunition to recharge weapons.
+
+Icon Item Canvas.png Canvas
+Icon Item Space Credit.png Space Credits (uncraftable)
+Icon Item Zone Chip.png Zone Chip (uncraftable)
+Icon Item Powerkit.png Powerkit
+Icon Item Medkit.png Medkit
+Icon Item Anti-Radiation MedKit.png Anti-Radiation MedKit (uncraftable)
+Icon Item Clang Cola.png Clang Cola (uncraftable)
+Icon Item Cosmic Coffee.png Cosmic Coffee (uncraftable)
+Icon Item S-10 Magazine.png S-10 Magazine
+Icon Item S-10E Magazine.png S-10E Magazine
+Icon Item S-20A Magazine.png S-20A Magazine
+Icon Item MR-20 Magazine.png MR-20 Magazine
+Icon Item MR-8P Magazine.png MR-8P Magazine
+Icon Item MR-50A Magazine.png MR-50A Magazine
+Icon Item MR-30E Magazine.png MR-30E Magazine
+Icon Item Gatling Ammo Box.png Gatling Ammo Box
+Icon Item Rocket.png Rocket
+Icon Item Autocannon Magazine.png Autocannon Magazine
+Icon Item Artillery Shell.png Artillery Shell
+Icon Item Assault Cannon Shell.png Assault Cannon Shell
+Icon Item Large Railgun Sabot.png Large Railgun Sabot
+Icon Item Small Railgun Sabot.png Small Railgun Sabot
+Icon Item Flare Gun Clip.png Flare Gun Clip
+Icon Item Fireworks Box.png Fireworks Box
+Components
+Components are crafted from materials in an Assembler. They are used up when building in survival mode.
+
+Icon Item Bulletproof Glass.png Bulletproof Glass
+Icon Item Computer.png Computer
+Icon Item Construction Comp..png Construction Comp.
+Icon Item Detector Components.png Detector Components
+Icon Item Display.png Display
+Icon Item Explosives.png Explosives
+Icon Item Girder.png Girder
+Icon Item Gravity Comp..png Gravity Comp.
+Icon Item Interior Plate.png Interior Plate
+Icon Item Medical Components.png Medical Components
+Icon Item Metal Grid.png Metal Grid
+Icon Item Motor.png Motor
+Icon Item Power Cell.png Power Cell
+Icon Item Radio-comm Comp..png Radio-comm Comp.
+Icon Item Reactor Comp..png Reactor Comp.
+Icon Item Solar Cell.png Solar Cell
+Icon Item Steel Plate.png Steel Plate
+Icon Item Large Steel Tube.png Steel Tube, Large
+Icon Item Small Steel Tube.png Steel Tube, Small
+Icon Item Superconductor.png Superconductor
+Icon Item Thruster Components.png Thruster Components
+Icon Block Engineer Plushie.png Engineer Plushie (uncraftable)
+Icon Block Saberoid Plushie.png Saberoid Plushie (uncraftable)
+Prototech Components
+Prototech Components are used only for building Prototech in survival mode.
+
+Icon Item Prototech Frame.png Prototech Frame (uncraftable)
+Icon Item Prototech Cooling Unit.png Prototech Cooling Unit
+Icon Item Prototech Circuitry.png Prototech Circuitry
+Icon Item Prototech Machinery.png Prototech Machinery
+Icon Item Prototech Propulsion Unit.png Prototech Propulsion Unit
+Icon Item Prototech Capacitor.png Prototech Capacitor
+Icon Item Prototech Panel.png Prototech Panel
+Materials
+Materials are ingots refined from raw ores.
+
+Icon Item Cobalt Ingot.png Cobalt Ingot
+Icon Item Gold Ingot.png Gold Ingot
+Icon Item Gravel.png Gravel
+Icon Item Iron Ingot.png Iron Ingot
+Icon Item Magnesium Powder.png Magnesium Powder
+Icon Item Nickel Ingot.png Nickel Ingot
+Icon Item Platinum Ingot.png Platinum Ingot
+Icon Item Silicon Wafer.png Silicon Wafer
+Icon Item Silver Ingot.png Silver Ingot
+Icon Item Uranium Ingot.png Uranium Ingot
+Ores
+Ores are obtained by mining (or in the case of scrap, grinding).
+
+Icon Item Iron Ore.png Iron Ore
+Icon Item Silicon Ore.png Silicon Ore
+Icon Item Nickel Ore.png Nickel Ore
+Icon Item Cobalt Ore.png Cobalt Ore
+Icon Item Magnesium Ore.png Magnesium Ore
+Icon Item Silver Ore.png Silver Ore
+Icon Item Gold Ore.png Gold Ore
+Icon Item Platinum Ore.png Platinum Ore
+Icon Item Uranium Ore.png Uranium Ore
+Icon Item Ice.png Ice
+Icon Item Stone.png Stone
+Icon Item Scrap Metal.png Scrap Metal
+Icon Item Prototech Scrap.png Prototech Scrap
+Ingredients
+Icon Item Fruit.png Fruits
+Icon Item Grain.png Grains
+Icon Item Mushrooms.png Mushrooms
+Icon Item Vegetables.png Vegetables
+Icon Item Algae.png Algae
+Icon Item Mammal Meat (Raw).png Mammal Meat (Raw)
+Icon Item Mammal Meat (Cooked).png Mammal Meat (Cooked)
+Icon Item Insect Meat (Raw).png Insect Meat (Raw)
+Icon Item Insect Meat (Cooked).png Insect Meat (Cooked)
+Seeds
+Icon Item Fruit Seeds.png Fruit Seeds
+Icon Item Grain Seeds.png Grain Seeds
+Icon Item Mushroom Spores.png Mushroom Spores
+Icon Item Vegetable Seeds.png Vegetable Seeds
+Food
+Icon Item Meal Pack (Kelp Crisp).png Meal Pack (Kelp Crisp)
+Icon Item Meal Pack (Fruit Bar).png Meal Pack (Fruit Bar)
+Icon Item Meal Pack (Garden Slaw).png Meal Pack (Garden Slaw)
+Icon Item Meal Pack (Red Pellets).png Meal Pack (Red Pellets)
+Icon Item Meal Pack (Chili).png Meal Pack (Chili)
+Icon Item Meal Pack (Ramen).png Meal Pack (Ramen)
+Icon Item Meal Pack (Flatbread).png Meal Pack (Flatbread)
+Icon Item Meal Pack (Fruit Pastry).png Meal Pack (Fruit Pastry)
+Icon Item Meal Pack (Veggie Burger).png Meal Pack (Veggie Burger)
+Icon Item Meal Pack (Green Pellets).png Meal Pack (Green Pellets)
+Icon Item Meal Pack (Curry).png Meal Pack (Curry)
+Icon Item Meal Pack (Dumplings).png Meal Pack (Dumplings)
+Icon Item Meal Pack (Spaghetti).png Meal Pack (Spaghetti)
+Icon Item Meal Pack (Lasagna).png Meal Pack (Lasagna)
+Icon Item Meal Pack (Burrito).png Meal Pack (Burrito)
+Icon Item Meal Pack (Frontier Stew).png Meal Pack (Frontier Stew)
+Icon Item Meal Pack (Seared Sabiroid).png Meal Pack (Seared Sabiroid)
+Icon Item Meal Pack (Steak Dinner).png Meal Pack (Steak Dinner)

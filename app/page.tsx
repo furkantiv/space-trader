@@ -1,65 +1,117 @@
-import Image from "next/image";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+import { getOptionalUser } from "@/lib/auth";
+
+const highlights = [
+	"Track BUY and SELL trades by episode.",
+	"See live balance and per-item profit/loss.",
+	"Replace the spreadsheet with a focused dashboard.",
+];
+
+export default async function HomePage() {
+	const user = await getOptionalUser();
+
+	if (user) {
+		redirect("/dashboard");
+	}
+
+	return (
+		<main className="relative overflow-hidden">
+			<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(48,181,208,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.14),_transparent_24%)]" />
+			<section className="mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-6 py-16 sm:px-10 lg:px-12">
+				<div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+					<div className="max-w-3xl">
+						<div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+							Space Engineers Trade Tracker
+						</div>
+						<h1 className="max-w-2xl text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+							A cleaner ledger for a trade-only survival run.
+						</h1>
+						<p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+							Build a table for each save, record every deal, and let the app
+							calculate balance, remaining stock, and realized profit without
+							fighting a spreadsheet.
+						</p>
+						<div className="mt-8 flex flex-col gap-3 sm:flex-row">
+							<Link
+								href="/login"
+								className="inline-flex items-center justify-center rounded-xl bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+							>
+								Register or log in
+							</Link>
+							<Link
+								href="/login"
+								className="inline-flex items-center justify-center rounded-xl border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
+							>
+								Open the dashboard
+							</Link>
+						</div>
+					</div>
+
+					<div className="rounded-[2rem] border border-white/10 p-5 shadow-2xl shadow-cyan-950/30 backdrop-blur">
+						<div className="rounded-[1.5rem] border border-white/8  p-5">
+							<div className="mb-4 flex items-center justify-between">
+								<div>
+									<p className="text-xs uppercase tracking-[0.3em] text-slate-500">
+										Episode 8 Snapshot
+									</p>
+									<p className="mt-2 text-2xl font-semibold text-white">
+										Balance: -14,302,280
+									</p>
+								</div>
+								<div className="rounded-xl border border-amber-400/20 bg-amber-400/10 px-3 py-2 text-right">
+									<p className="text-[11px] uppercase tracking-[0.2em] text-amber-200">
+										Warning
+									</p>
+									<p className="text-sm font-medium text-amber-100">
+										Oversold items flagged
+									</p>
+								</div>
+							</div>
+
+							<div className="overflow-hidden rounded-2xl border border-white/8">
+								<table className="w-full text-left text-sm">
+									<thead className="bg-white/5 text-slate-400">
+										<tr>
+											<th className="px-4 py-3 font-medium">Type</th>
+											<th className="px-4 py-3 font-medium">Item</th>
+											<th className="px-4 py-3 font-medium">Amount</th>
+											<th className="px-4 py-3 font-medium">Unit Price</th>
+										</tr>
+									</thead>
+									<tbody className="divide-y divide-white/6">
+										<tr className="text-slate-200">
+											<td className="px-4 py-3 text-rose-300">BUY</td>
+											<td className="px-4 py-3">Motor</td>
+											<td className="px-4 py-3">1,196</td>
+											<td className="px-4 py-3">5,774</td>
+										</tr>
+										<tr className="text-slate-200">
+											<td className="px-4 py-3 text-emerald-300">SELL</td>
+											<td className="px-4 py-3">Interior Plate</td>
+											<td className="px-4 py-3">909</td>
+											<td className="px-4 py-3">585</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<ul className="mt-5 space-y-3">
+								{highlights.map((highlight) => (
+									<li
+										key={highlight}
+										className="flex items-start gap-3 text-sm text-slate-300"
+									>
+										<span className="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-300" />
+										<span>{highlight}</span>
+									</li>
+								))}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	);
 }
