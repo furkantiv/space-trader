@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { Analytics } from "@vercel/analytics/next";
 
 import { getOptionalUser } from "@/lib/auth";
+import { hasSupabaseEnv } from "@/lib/supabase/env";
 
 const highlights = [
 	"Track BUY and SELL trades by episode.",
@@ -12,6 +13,7 @@ const highlights = [
 
 export default async function HomePage() {
 	const user = await getOptionalUser();
+	const isSupabaseConfigured = hasSupabaseEnv();
 
 	if (user) {
 		redirect("/dashboard");
@@ -35,6 +37,19 @@ export default async function HomePage() {
 							calculate balance, remaining stock, and realized profit without
 							fighting a spreadsheet.
 						</p>
+						{!isSupabaseConfigured ? (
+							<div className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">
+								This deployment is missing Supabase environment variables. Add
+								<code className="mx-1 text-amber-50">
+									NEXT_PUBLIC_SUPABASE_URL
+								</code>
+								and
+								<code className="mx-1 text-amber-50">
+									NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+								</code>
+								in Vercel, then redeploy.
+							</div>
+						) : null}
 						<div className="mt-8 flex flex-col gap-3 sm:flex-row">
 							<Link
 								href="/login"

@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { login, signUp } from "@/app/actions/auth";
 import { SubmitButton } from "@/app/components/submit-button";
 import { getOptionalUser } from "@/lib/auth";
+import { hasSupabaseEnv } from "@/lib/supabase/env";
 
 type SearchParamValue = string | string[] | undefined;
 
@@ -17,6 +18,7 @@ export default async function LoginPage({
   searchParams: Promise<Record<string, SearchParamValue>>;
 }) {
   const user = await getOptionalUser();
+  const isSupabaseConfigured = hasSupabaseEnv();
 
   if (user) {
     redirect("/dashboard");
@@ -77,6 +79,18 @@ export default async function LoginPage({
           {message ? (
             <div className="mt-6 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100">
               {message}
+            </div>
+          ) : null}
+
+          {!isSupabaseConfigured ? (
+            <div className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-4 py-3 text-sm text-amber-100">
+              Sign-in is disabled until this deployment gets
+              <code className="mx-1 text-amber-50">NEXT_PUBLIC_SUPABASE_URL</code>
+              and
+              <code className="mx-1 text-amber-50">
+                NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+              </code>
+              in Vercel.
             </div>
           ) : null}
 
