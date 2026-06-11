@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -16,7 +15,6 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="h-full antialiased">
-			<Analytics />
 			<body className="min-h-full">{children}</body>
 		</html>
 	);

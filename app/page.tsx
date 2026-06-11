@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 
 import { getOptionalUser } from "@/lib/auth";
 
@@ -18,6 +19,7 @@ export default async function HomePage() {
 
 	return (
 		<main className="relative overflow-hidden">
+			<Analytics />
 			<div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(48,181,208,0.18),_transparent_32%),radial-gradient(circle_at_bottom_right,_rgba(245,158,11,0.14),_transparent_24%)]" />
 			<section className="mx-auto flex min-h-screen w-full max-w-7xl flex-col justify-center px-6 py-16 sm:px-10 lg:px-12">
 				<div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
